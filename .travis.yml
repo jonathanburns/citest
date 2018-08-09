@@ -1,2 +1,5 @@
-language: python
-script: echo foo
+language: ruby
+rvm:
+  - 2.2
+  - jruby
+#script: echo foo
