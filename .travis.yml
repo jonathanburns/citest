@@ -5,6 +5,10 @@ rvm:
 env:
   - DB=postgres
   - SH=bash
-  - PACKAGE_VERSION="1.0.*"
 # this triggers two total builds
-script: echo foo
+jobs:
+  include:
+    - script: echo foo
+    - stage: stage2
+      script: echo foo
+#script: echo foo
