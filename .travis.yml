@@ -8,7 +8,8 @@ env:
 # this triggers two total builds
 jobs:
   include:
-    - script: echo foo
+    - stage: test
+      script: echo foo
     - stage: stage2
       script: echo foo
 #script: echo foo
