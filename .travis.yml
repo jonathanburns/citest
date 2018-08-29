@@ -1,15 +1,11 @@
+sudo: required
+services:
+  - docker
 language: ruby
 rvm:
   - 2.2
-  - jruby
-env:
-  - DB=postgres
-  - SH=bash
-# this triggers two total builds
 jobs:
   include:
     - stage: test
+      install: ./minikube-ci-initialize.sh
       script: echo foo
-    - stage: stage2
-      script: echo foo
-#script: echo foo
