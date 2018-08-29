@@ -1,2 +1,11 @@
-language: python
-script: echo foo
+sudo: required
+services:
+  - docker
+language: ruby
+rvm:
+  - 2.2
+jobs:
+  include:
+    - stage: test
+      install: ./minikube-ci-initialize.sh
+      script: echo foo
